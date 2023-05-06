@@ -1,0 +1,87 @@
+/*todo : start Code Style */
+/* default Style Website */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: vazir;
+}
+/* Add Font-Face */
+@font-face {
+    font-family: 'Yekan';
+    src: url('/public/Font/Yekan.ttf');
+}
+
+@font-face {
+    font-family: vazir;
+    src: url('/public/Font/Vazirmatn-Medium.ttf');
+}
+
+@media (max-width: 1200px) {
+    html{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    html{
+        font-size: 1.1rem;
+    }
+}
+
+
+/* Background WebSite And Slider */
+.background-card-1{
+    width: 100%;
+    height: 91vh;
+    background-image: linear-gradient(rgba(0,0,0,0.35) , rgba(0,0,0,0.35)),url('/src/background/slide-2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-slid-1 .btn-card{
+    width: 200px;
+    height: 40px;
+}
+
+
+.background-card-2{
+    width: 100%;
+    height: 91vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/src/background/slide-1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+}
+.background-card-3 {
+    width: 100%;
+    height: 91vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/src/background/slide-3.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: none;
+}
+
+/* Slider style ( next and Previous ) */
+
+.Previous, .next {
+    padding: 10px;
+    text-decoration: none;
+    color: #fff;
+    top: 50%;
+    transform: translate(0, -50%);
+    position: absolute;
+}
+
+.Previous {
+    left: 20px;
+}
+
+.next {
+    right: 20px;
+}
+
+/* Relationship to JavaScript */
