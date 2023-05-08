@@ -29,12 +29,37 @@
     }
 }
 
+/* menu-d */
+
+.divide-nav ul li {
+    padding-left: 8px;
+    position: relative;
+}
+
+.menu::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    height: 0px;
+    width: 0px;
+    border-radius: 2px;
+    background-color: #ff1100;
+    transition: 0.4s ease-in-out;
+}
+
+.menu:hover::after{
+    width: 70px;
+    height: 5px;
+}
+
+
 
 /* Background WebSite And Slider */
 .background-card-1{
     width: 100%;
-    height: 91vh;
-    background-image: linear-gradient(rgba(0,0,0,0.35) , rgba(0,0,0,0.35)),url('/src/background/slide-2.jpg');
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.35) , rgba(0,0,0,0.35)),url("../background/slider-1.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -48,8 +73,8 @@
 
 .background-card-2{
     width: 100%;
-    height: 91vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/src/background/slide-1.jpg');
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("../background/slider-2.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -57,8 +82,8 @@
 }
 .background-card-3 {
     width: 100%;
-    height: 91vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('/src/background/slide-3.jpeg');
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("../background/slider-3.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -85,3 +110,71 @@
 }
 
 /* Relationship to JavaScript */
+
+.link-show{
+    width: 0;
+    height: 0;
+    background-color: #fff;
+    position: absolute;
+    left: 35%;
+    border-radius: 0 0 10px 10px;
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+}
+
+
+.link-show.activeShow{
+    width: 300px;
+    height: 200px;
+    transition: all 0.2s ease-in-out;
+}
+
+/* svg */
+
+.svg-moon{
+    width: 30px;
+    cursor: pointer;
+}
+
+.svg-bar{
+    width: 30px;
+    cursor: pointer;
+}
+
+.svg-brightness {
+    width: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+/* ui Moon and moon-Fill */
+
+.navbar-breach.dark{
+    background-color: #000;
+    color: #fff;
+}
+
+.navbar-breach.light {
+    background-color: #fff;
+    color: #000;
+}
+
+.svg-brightness.light{
+    display: block;
+}
+
+.svg-moon.active{
+    display: block;
+}
+
+.form-mood{
+    width: 100px;
+    height: 50px;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}

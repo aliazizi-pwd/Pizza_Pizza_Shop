@@ -19,40 +19,52 @@
     
     <section class="set-1">
         <div class="navbar-total">
-            <nav class="navbar navbar-expand-lg bg-body shadow">
+            <nav class="navbar-breach navbar-expand-lg navbar shadow">
             <div class="container">
             <a href="" class="w-25 h-25">
-            <img src="./src/logo/logo-black.png" class="navbar-brand" alt="logo">
+            <img src="./src/logo/logo-black.png" class=" navbar-toggler-icon w-50 h-50" alt="logo">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bolder fs-6" dir="rtl">
+            <div class="divide-nav collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="ul-navbar navbar-nav me-auto mb-2 mb-lg-0 fw-bolder fs-6" dir="rtl">
             <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">خانه</a>
+            <a class="nav-link active text-danger d-inline-block ps-3" aria-current="page" href="#">خانه</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link" href="#">محصولات</a>
+            <a class="nav-link active" href="#">محصولات</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link">نوشیدنی</a>
+            <a class="nav-link active" href="#">درباره ما</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link">درباره ما</a>
+            <a class="nav-link active" href="#">مخاطب ما</a>
             </li>
             <li class="nav-item">
-            <a class="nav-link disabled">مخاطب ما</a>
+                <a class="nav-link btn-link active" href="#">فروش ویژه &#10024;</a>
             </li>
         </ul>
-        <form action="">
-        <div class="action-bar nav-link" dir="rtl">
-        <img src="./src/logo/cart4.svg" alt="" class="" style="width: 30px; cursor: pointer;">
+        <form action="" class="form-mood d-flex flex-row justify-content-center align-items-center">
+        <div class="action-bar nav-link m-3" dir="rtl">
+        <img src="./src/logo/cart4.svg" alt="" class="svg-bar">
+        </div>
+        <div class="action-moon nav-link" dir="rtl">
+            <img src="./src/logo/moon.svg" class="active-moon svg-moon">
+            <img src="./src/logo/brightness-high.svg" class="svg-brightness">
         </div>
         </form>
         </div>
         </div>
         </nav>
+    </div>
+    <div class="link-show">
+        <ul class="ul-navbar navbar-nav me-auto mb-2 mb-lg-0 fw-bolder fs-6" dir="rtl">
+            <li class=""><a href="#" class="nav-link active pt-4 px-3">پیتزا ایتالیایی &#10024;</a></li>
+            <li class=""><a href="#" class="nav-link active pt-2 px-3">پیتزا مخصوص  &#10024;</a></li>
+            <li class=""><a href="#" class="nav-link active pt-2 px-3">همبرگر مخصوص &#10024;</a></li>
+            <li class=""><a href="#" class="nav-link active pt-2 px-3">نوشیدنی مخصوص &#10024;</a></li>
+        </ul>
     </div>
     <!-- box baner WebSite -->
     <div class="background-card-1 slider" dir="rtl">
@@ -92,8 +104,6 @@
         </div>
     </div>
     </section>
-
-
 <!-- Add JavaScript files -->
 <script src="./Components/ui.js"></script>
 <script src="./Components/slider.js"></script>
