@@ -1,42 +1,34 @@
-let next = document.querySelectorAll(".next");
-let previous = document.querySelectorAll(".Previous");
-let sliderAll = document.querySelectorAll(".slider");
+const next = document.querySelectorAll(".next");
+const previous = document.querySelectorAll(".Previous");
+const slider = document.querySelectorAll(".slider");
 let count = 0;
 
-
-// stop
 function stopSlider() {
-    for (let i = 0; i < sliderAll.length; i++) {
-        sliderAll[i].style.display = "none";
+    for (let i = 0; i < slider.length; i++) {
+        slider[i].style.display = "none";
     }
 }
 
-// run Next
-next.forEach((itemNext) => {
-    itemNext.addEventListener('click' , nextSlider);
+next.forEach((btnItem) => {
+    btnItem.addEventListener("click" , (e) => {
+        e.preventDefault();
+        stopSlider();
+        if (count === slider.length - 1) {
+            count = 0;
+        }
+        count++;
+        slider[count].style.display = "block";
+    });
 });
 
-previous.forEach((itemPrevious) => {
-    itemPrevious.addEventListener('click' , previousSlider);
+previous.forEach((btnItem) => {
+    btnItem.addEventListener("click" , (e) => {
+        e.preventDefault();
+        stopSlider();
+        if (count <= 0) {
+            count = slider.length;
+        }
+        count--;
+        slider[count].style.display = "block";
+    });
 });
-
-function nextSlider(e) {
-    e.preventDefault();
-    stopSlider();
-    if (count === sliderAll.length - 1) {
-        count = 0;
-    }
-    count++;
-    sliderAll[count].style.display = "block";
-}
-
-function previousSlider(e) {
-    e.preventDefault();
-    count--;
-    if (count < 0) {
-        count = sliderAll.length - 1;
-    }
-    stopSlider();
-    sliderAll[count].style.display = "block";
-}
-

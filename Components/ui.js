@@ -19,26 +19,27 @@ function displayLinks(e) {
 
 
 // Contoller Moon and Moon-Fill
-
 const brightness = document.querySelector(".svg-brightness");
 const moon = document.querySelector(".active-moon");
 moon.addEventListener("click" , displayDark);
 brightness.addEventListener("click" , displayBrightness);
 
+
 function displayDark() {
-    moon.classList.add("d-none");
-    brightness.classList.add("light");
-    navbarBreach.classList.add("dark");
-    tagA.forEach((item) => item.classList.add("text-light"));
-    bodyHTML.style.backgroundColor = "#000";
-    bodyHTML.style.color = "#fff";
+  moon.classList.add("d-none");
+  brightness.classList.add("light");
+  navbarBreach.classList.add("dark");
+  tagA.forEach((item) => item.classList.add("text-light"));
+  bodyHTML.style.backgroundColor = "#000";
+  bodyHTML.style.color = "#fff";
 }
 
 function displayBrightness() {
-    moon.classList.remove("d-none");
-    brightness.classList.remove("light");
-    navbarBreach.classList.remove("dark");
-    tagA.forEach((item) => item.classList.add("text-dark"));
-    bodyHTML.style.backgroundColor = "#fff";
-    bodyHTML.style.color = "#000";
+  moon.classList.remove("d-none");
+  brightness.classList.remove("light");
+  navbarBreach.classList.remove("dark");
+  tagA.forEach((item) => item.classList.remove("text-light"));
+  bodyHTML.style.backgroundColor = "#fff";
+  bodyHTML.style.color = "#000";
 }
+
