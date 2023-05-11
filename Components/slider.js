@@ -13,10 +13,10 @@ next.forEach((btnItem) => {
     btnItem.addEventListener("click" , (e) => {
         e.preventDefault();
         stopSlider();
-        if (count === slider.length - 1) {
+        count++;
+        if (count === slider.length) {
             count = 0;
         }
-        count++;
         slider[count].style.display = "block";
     });
 });
@@ -24,11 +24,51 @@ next.forEach((btnItem) => {
 previous.forEach((btnItem) => {
     btnItem.addEventListener("click" , (e) => {
         e.preventDefault();
-        stopSlider();
-        if (count <= 0) {
-            count = slider.length;
-        }
         count--;
+        if (count < 0) {
+            count = slider.length - 1;
+        }
+        stopSlider();
         slider[count].style.display = "block";
+    });
+});
+
+
+
+// about webSite
+
+const listAbout = document.querySelectorAll(".slider-focus");
+const nextAboutBtn = document.querySelectorAll(".next-slide");
+const previousAboutBtn = document.querySelectorAll(".Previous-slide");
+let counter = 0;
+
+function stopSliderAbout() {
+  for (let i = 0; i < listAbout.length; i++) {
+    listAbout[i].style.display = "none";
+  }
+}
+
+
+nextAboutBtn.forEach((item) => {
+    item.addEventListener('click' , (e) => {
+      e.preventDefault();
+      stopSliderAbout();
+      counter++;
+      if (counter == listAbout.length) {
+        counter = 0;
+      }
+      listAbout[counter].style.display = "block";
+    });
+});
+
+previousAboutBtn.forEach((item) => {
+    item.addEventListener('click' , (e) => {
+        e.preventDefault();
+        counter--;
+        if (counter < 0) {
+            counter = listAbout.length - 1;
+        }
+        stopSliderAbout();
+        listAbout[counter].style.display = "block";
     });
 });

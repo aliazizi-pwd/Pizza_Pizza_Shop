@@ -231,12 +231,10 @@ body::-webkit-scrollbar{
     background-color: #fff;
 }
 body::-webkit-scrollbar-thumb{
-    background-color: #bbb8b8;
-    border-radius: 8px;
-    border-radius: 10px;
+    background-color: #ec382b;
 }
 body::-webkit-scrollbar-thumb:hover{
-    background-color: #a8a8a8;
+    background-color: #c50000;
 }
 
 /* image => image-app */
@@ -265,4 +263,66 @@ body::-webkit-scrollbar-thumb:hover{
         transform: translate3d(3px , 2px, 1px);
         transform: rotate3d(4px, 5px, 6px);
     }
+}
+
+/* image-rotate */
+.image-rotate{
+    width: 400px;
+    height: 400px;
+    animation: rotate 12s ease-in alternate infinite;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 567px) {
+    .image-rotate {
+        width: 320px;
+        height: 320px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/* slider-About */
+
+.slider-focus{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.Previous-slide,.next-slide {
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    top: 50%;
+    transform: translate(0, -50%);
+    position: absolute;
+}
+
+.Previous-slide {
+    left: 200px;
+    font-size: 30px;
+}
+
+.next-slide {
+    right: 200px;
+    font-size: 30px;
+}
+
+.slider-focus{
+    display: none;
+}
+
+.slider-focus.active{
+    display: block;
 }
