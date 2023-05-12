@@ -267,8 +267,6 @@ body::-webkit-scrollbar-thumb:hover{
 
 /* image-rotate */
 .image-rotate{
-    width: 400px;
-    height: 400px;
     animation: rotate 12s ease-in alternate infinite;
 }
 
@@ -325,4 +323,61 @@ body::-webkit-scrollbar-thumb:hover{
 
 .slider-focus.active{
     display: block;
+}
+
+@media (max-width: 567px) {
+    .Previous-slide {
+        left: 20px;
+        font-size: 20px;
+        
+    }
+    
+    .next-slide {
+    right: 20px;
+    font-size: 20px;
+    }
+
+    .text-about{
+        width: auto;
+    }
+}
+
+/* openBox */
+
+.open-box{
+    cursor: pointer;
+}
+
+.data-show-1{
+    display: none;
+}
+
+.minus{
+    display: none;
+}
+
+.data-show-1.active{
+    display: block;
+    transition: all 0.5s ease-in-out;
+}
+
+.minus.active{
+    display: block;
+    color: #ffd000;
+}
+
+
+/* img-card-panel */
+
+.img-card-panel{
+    width: 150px;
+    height: 200px;
+}
+
+.img-card-panel.active {
+    display: block;
+}
+
+.img-card-panel.noactive{
+    display: none;
 }

@@ -43,3 +43,77 @@ function displayBrightness() {
   bodyHTML.style.color = "#000";
 }
 
+// optional Box (open-box)
+const openBox = document.querySelectorAll(".open-box");
+
+openBox.forEach((item) => {
+  item.addEventListener("click" , () => {
+    let pages = item.parentElement;
+    pages.querySelector(".data-show-1").classList.toggle("active");
+    pages.querySelector(".plus").classList.toggle("d-none");
+    pages.querySelector(".minus").classList.toggle("active");
+  });
+});
+
+
+
+// panel Foods ()
+const panelA = [];
+const Traditional = document.querySelectorAll(".Traditional");
+const pizza = document.querySelectorAll(".pizza");
+const hamburger = document.querySelector(".hamburger");
+const btnClicked = document.querySelectorAll(".btn-clicked");
+const allFood = document.querySelectorAll(".img-card-panel");
+
+
+function rundPanelFood () {
+  let btnAll = document.querySelector(".btn-clicked-all");
+  btnAll.addEventListener("click" , showAllFood);
+  
+  let btnPizza = document.querySelector(".btn-clicked-pizza");
+  btnPizza.addEventListener("click" , showPizza);
+
+  let btnhamburger = document.querySelector(".btn-clicked-hamburger");
+  btnhamburger.addEventListener("click", showAllhamburger);
+}
+
+rundPanelFood();
+
+
+function showPizza() {
+  allFood.forEach((food) => {
+    if (food.classList.contains("pizza") === true) {
+        for (let i = 0; i < pizza.length; i++) {
+          pizza[i].classList.add("active");
+        }      
+        for (let j = 0; j < Traditional.length; j++) {
+          Traditional[j].classList.add("noactive");
+        }
+        for (let x = 0; x < hamburger.length; x++) {
+          hamburger[x].classList.add("noactive");
+        }
+    }
+  });
+}
+
+
+function showAllFood() {
+  allFood.forEach((food) => {
+    if (food.classList.contains("img-card-panel") === true) {
+      for (let i = 0; i < pizza.length; i++) {
+        pizza[i].classList.remove("noactive");
+      }
+    }
+  });
+}
+
+
+function showAllhamburger() {
+  allFood.forEach((food) => {
+    if (food.classList.contains("hamburger") === true) {
+      for (let i = 0; i < hamburger.length; i++) {
+        
+      }
+    }
+  });
+}
