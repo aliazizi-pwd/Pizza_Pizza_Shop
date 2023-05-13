@@ -22,6 +22,7 @@ function displayLinks(e) {
 const brightness = document.querySelector(".svg-brightness");
 const moon = document.querySelector(".active-moon");
 const navSliderDown = document.querySelectorAll(".nav-line");
+const progresser = document.querySelector(".progresser");
 moon.addEventListener("click" , displayDark);
 brightness.addEventListener("click" , displayBrightness);
 
@@ -32,6 +33,7 @@ function displayDark() {
   navbarBreach.classList.add("dark");
   tagA.forEach((item) => item.classList.add("text-light"));
   navSliderDown.forEach((item) => item.style.backgroundColor = "#000");
+  progresser.classList.add("activer");
   bodyHTML.style.backgroundColor = "#000";
   bodyHTML.style.color = "#fff";
 }
@@ -42,6 +44,7 @@ function displayBrightness() {
   navbarBreach.classList.remove("dark");
   tagA.forEach((item) => item.classList.remove("text-light"));
   navSliderDown.forEach((item) => (item.style.backgroundColor = "#fff"));
+  progresser.classList.remove("activer");
   bodyHTML.style.backgroundColor = "#fff";
   bodyHTML.style.color = "#000";
 }
