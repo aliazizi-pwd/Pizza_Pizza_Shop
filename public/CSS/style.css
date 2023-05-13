@@ -46,7 +46,7 @@
 /* Background WebSite And Slider */
 .background-card-1{
     width: 100%;
-    height: 93vh;
+    height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.35) , rgba(0,0,0,0.12)),url("../background/slider-1.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -58,7 +58,7 @@
 }
 .background-card-2{
     width: 100%;
-    height: 93vh;
+    height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.25)), url("../background/slider-2.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -66,7 +66,7 @@
 }
 .background-card-3 {
     width: 100%;
-    height: 93vh;
+    height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.75)), url("../background/slider-3.jpeg");
     background-position: center;
     background-repeat: no-repeat;
@@ -160,8 +160,9 @@
     width: 0;
     height: 0;
     background-color: #fff;
-    position: absolute;
-    left: 35%;
+    position: fixed;
+    top: 6%;
+    left: 30%;
     border-radius: 0 0 10px 10px;
     transition: all 0.2s ease-in-out;
     overflow: hidden;
@@ -267,6 +268,7 @@ body::-webkit-scrollbar-thumb:hover{
 
 /* image-rotate */
 .image-rotate{
+    z-index: 1;
     animation: rotate 12s ease-in alternate infinite;
 }
 
@@ -368,16 +370,43 @@ body::-webkit-scrollbar-thumb:hover{
 
 
 /* img-card-panel */
-
 .img-card-panel{
     width: 150px;
-    height: 200px;
+    height: 180px;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
-.img-card-panel.active {
-    display: block;
+.btn-clicked{
+    width: 110px;
+    height: 40px;
+    background-color: red;
+    color: #fff;
+    text-align: center;
+    padding-top: 8px;
+    text-decoration: none;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
-.img-card-panel.noactive{
-    display: none;
+.btn-clicked:hover{
+    background-color: #008000;
+    transform: translateY(-2px);
+}
+
+.btn-clicked.active{
+    background-color: #008000;
+}
+
+.progresser{
+    width: 100%;
+    height: 8px;
+    background-color: #fff;
+    box-shadow: inset 0 0 10px #c7c7c7;
+}
+
+.progresser .progresser-bar {
+    width: 0%;
+    height: 8px;
+    background-image: linear-gradient(to left , rgba(184,2,216) , rgba(255 , 0 , 43));
 }

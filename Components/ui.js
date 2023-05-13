@@ -21,6 +21,7 @@ function displayLinks(e) {
 // Contoller Moon and Moon-Fill
 const brightness = document.querySelector(".svg-brightness");
 const moon = document.querySelector(".active-moon");
+const navSliderDown = document.querySelectorAll(".nav-line");
 moon.addEventListener("click" , displayDark);
 brightness.addEventListener("click" , displayBrightness);
 
@@ -30,6 +31,7 @@ function displayDark() {
   brightness.classList.add("light");
   navbarBreach.classList.add("dark");
   tagA.forEach((item) => item.classList.add("text-light"));
+  navSliderDown.forEach((item) => item.style.backgroundColor = "#000");
   bodyHTML.style.backgroundColor = "#000";
   bodyHTML.style.color = "#fff";
 }
@@ -39,6 +41,7 @@ function displayBrightness() {
   brightness.classList.remove("light");
   navbarBreach.classList.remove("dark");
   tagA.forEach((item) => item.classList.remove("text-light"));
+  navSliderDown.forEach((item) => (item.style.backgroundColor = "#fff"));
   bodyHTML.style.backgroundColor = "#fff";
   bodyHTML.style.color = "#000";
 }
@@ -56,64 +59,28 @@ openBox.forEach((item) => {
 });
 
 
+// Filter Foods (Panel Boxes)
 
-// panel Foods ()
-const panelA = [];
-const Traditional = document.querySelectorAll(".Traditional");
-const pizza = document.querySelectorAll(".pizza");
-const hamburger = document.querySelector(".hamburger");
-const btnClicked = document.querySelectorAll(".btn-clicked");
-const allFood = document.querySelectorAll(".img-card-panel");
+const listItem = document.querySelectorAll(".img-card-panel");
+const btnClickedFilter = document.querySelectorAll(".btn-clicked");
 
-
-function rundPanelFood () {
-  let btnAll = document.querySelector(".btn-clicked-all");
-  btnAll.addEventListener("click" , showAllFood);
-  
-  let btnPizza = document.querySelector(".btn-clicked-pizza");
-  btnPizza.addEventListener("click" , showPizza);
-
-  let btnhamburger = document.querySelector(".btn-clicked-hamburger");
-  btnhamburger.addEventListener("click", showAllhamburger);
-}
-
-rundPanelFood();
+btnClickedFilter.forEach((btnItem) => {
+  btnItem.addEventListener("click" , filterFoods);
+});
 
 
-function showPizza() {
-  allFood.forEach((food) => {
-    if (food.classList.contains("pizza") === true) {
-        for (let i = 0; i < pizza.length; i++) {
-          pizza[i].classList.add("active");
-        }      
-        for (let j = 0; j < Traditional.length; j++) {
-          Traditional[j].classList.add("noactive");
-        }
-        for (let x = 0; x < hamburger.length; x++) {
-          hamburger[x].classList.add("noactive");
-        }
+function filterFoods(e) {
+  const nameButton = e.target.name;
+  listItem.forEach((itemFood) => {
+    if (nameButton === "all") {
+      itemFood.style.display = "block";
+    }
+    else if (itemFood.classList.contains(nameButton)) {
+      itemFood.style.display = "block";
+    } else {
+      itemFood.style.display = "none";
     }
   });
 }
 
 
-function showAllFood() {
-  allFood.forEach((food) => {
-    if (food.classList.contains("img-card-panel") === true) {
-      for (let i = 0; i < pizza.length; i++) {
-        pizza[i].classList.remove("noactive");
-      }
-    }
-  });
-}
-
-
-function showAllhamburger() {
-  allFood.forEach((food) => {
-    if (food.classList.contains("hamburger") === true) {
-      for (let i = 0; i < hamburger.length; i++) {
-        
-      }
-    }
-  });
-}

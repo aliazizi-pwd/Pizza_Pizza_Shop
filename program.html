@@ -20,7 +20,7 @@
 <body>
     <!-- navbar -->
     <section class="set-1">
-        <div class="navbar-total">
+        <div class="navbar-total w-100 h-auto position-fixed top-0 bg-body z-2">
             <nav class="navbar-breach navbar-expand-lg navbar shadow">
             <div class="container">
             <img src="./src/logo/logo.jpg" class="logo">
@@ -58,13 +58,16 @@
         </div>
         </div>
         </nav>
+        <div class="progresser" dir="rtl">
+            <div class="progresser-bar" dir="rtl"></div>
+        </div>
     </div>
     <div class="link-show">
         <ul class="ul-navbar navbar-nav me-auto mb-2 mb-lg-0 fw-bolder fs-6" dir="rtl">
-            <li class=""><a href="#" class="nav-link active pt-4 px-3">پیتزا ایتالیایی &#10024;</a></li>
-            <li class=""><a href="#" class="nav-link active pt-2 px-3">پیتزا مخصوص  &#10024;</a></li>
-            <li class=""><a href="#" class="nav-link active pt-2 px-3">همبرگر مخصوص &#10024;</a></li>
-            <li class=""><a href="#" class="nav-link active pt-2 px-3">نوشیدنی مخصوص &#10024;</a></li>
+            <li class=""><a href="#" class="nav-link active pt-4 px-3 nav-line">پیتزا ایتالیایی &#10024;</a></li>
+            <li class=""><a href="#" class="nav-link active pt-2 px-3 nav-line">پیتزا مخصوص  &#10024;</a></li>
+            <li class=""><a href="#" class="nav-link active pt-2 px-3 nav-line">همبرگر مخصوص &#10024;</a></li>
+            <li class=""><a href="#" class="nav-link active pt-2 px-3 nav-line">نوشیدنی مخصوص &#10024;</a></li>
         </ul>
     </div>
     <!-- box baner WebSite -->
@@ -163,16 +166,16 @@
             <div class="row row-cols-1">
                 <div class="col">
                 <div class="panel-foods d-flex align-items-center justify-content-center flex-row">
-                    <button class="btn-clicked-all btn bg-success text-light m-1">همه</button>
-                    <button class="btn-clicked-pizza btn bg-danger text-light m-1">پیتزا</button>
-                    <button class="btn-clicked-hamburger btn bg-danger text-light m-1">همبرگر</button>
-                    <button class="btn-clicked btn bg-danger text-light m-1">غذای دریایی</button>
-                    <button class="btn-clicked btn bg-danger text-light m-1">غذای سنتی</button>
-                    <button class="btn-clicked btn bg-danger text-light m-1">سالاد</button>
+                    <a class="btn-clicked  m-1 active" name="all">همه</a>
+                    <a class="btn-clicked  m-1" name="pizza">پیتزا</a>
+                    <a class="btn-clicked m-1" name="hamburger">همبرگر</a>
+                    <a class="btn-clicked  m-1" name="Traditional">غذای سنتی</a>
+                    <a class="btn-clicked  m-1" name="marine">غذای دریایی</a>
+                    <a class="btn-clicked  m-1" name="salad">سالاد</a>
                 </div>
-                <div class="col mt-4">
+                <div class="col mt-5">
                     <div class="d-flex justify-content-center row row-cols-2 row-cols-xl-5 row-cols-lg-4 row-cols-sm-2 g-2">
-                        <img src="./src/images/buy-1.jpeg" class="img-card-panel Traditional">
+                        <img src="./src/images/buy-1.jpeg" class="img-card-panel Traditional" id="tr">
                         <img src="./src/images/buy-2.jpeg" class="img-card-panel hamburger">
                         <img src="./src/images/buy-3.jpeg" class="img-card-panel pizza">
                         <img src="./src/images/buy-4.jpeg" class="img-card-panel hamburger">
@@ -182,6 +185,16 @@
                         <img src="./src/images/press-2.png" class="img-card-panel pizza">
                         <img src="./src/images/press-3.png" class="img-card-panel Traditional">
                         <img src="./src/images/press-4.png" class="img-card-panel pizza">
+                        <img src="./src/images/hamburger-1.png" class="img-card-panel hamburger">
+                        <img src="./src/images/hamburger-2.png" class="img-card-panel hamburger">
+                        <img src="./src/images/hamburger-3.png" class="img-card-panel hamburger">
+                        <img src="./src/images/hamburger-4.png" class="img-card-panel hamburger">
+                        <img src="./src/images/gallery-4.jpg" class="img-card-panel salad">
+                        <img src="./src/images/gallery-7.jpg" class="img-card-panel marine">
+                        <img src="./src/images/gallery-1.jpg" class="img-card-panel cake">
+                        <img src="./src/images/gallery-6.jpg" class="img-card-panel hamburger">
+                        <img src="./src/images/gallery-3.jpg" class="img-card-panel Traditional">
+                        <img src="./src/images/gallery-8.jpg" class="img-card-panel cake">
                     </div>
                 </div>
                 </div>
@@ -351,6 +364,7 @@
 <!-- Add JavaScript files -->
 <script src="./Components/ui.js"></script>
 <script src="./Components/slider.js"></script>
+<script src="./Components/scrollBar.js"></script>
 <script src="./Components/panel.js"></script>
 <script src="./public/JS/main.js"></script>
 <script src="./public/JS/other.js"></script>
