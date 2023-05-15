@@ -455,3 +455,60 @@ body::-webkit-scrollbar-thumb:hover{
         font-size: 17px;
     }
 }
+
+/* page Style */
+
+.navbar-espesl{
+    border-bottom: 2px solid #cecdcd;
+}
+
+.bell{
+    cursor: pointer;
+}
+
+.img-baner-safarsh{
+    width: 100%;
+    height: 200px;
+    background-image: url(../background/bg-1.jpg);
+    cursor: pointer;
+}
+
+.arrow-down-comment{
+    cursor: pointer;
+}
+
+/* form */
+
+.form{
+    margin: 100px 100px;
+}
+
+.selected-food{
+    width: 180px;
+    height: 45px;
+}
+
+.btn-send-comment{
+    width: 250px;
+    height: 50px;
+    padding: 5px;
+    color: #000;
+    background-color: #ffe600;
+    border: none;
+    transition: all 0.2s ease-in;
+}
+
+.btn-send-comment:hover{
+    transition: all 0.2s ease-in;
+    background-color: #c50000;
+    color: #fff;
+    box-shadow: 0 0 6px #000;
+}
+
+.form-control-comment{
+    width: 100%;
+    height: auto;
+    background-image: linear-gradient(rgba(0,0,0,0.45) , rgba(0,0,0,0.45)) , url(../background/newsletter-bg.jpg);
+    background-position: left;
+    background-repeat: no-repeat;
+}
