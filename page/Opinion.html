@@ -7,6 +7,7 @@
 <title>نظرات در مورد فروشگاه ما</title>
 <link rel="image icon" href="../src/logo/logo.jpg">
 <link rel="stylesheet" href="../public/CSS/style.css">
+<link rel="stylesheet" href="../page/Opinion.html">
 <link rel="stylesheet" href="../public/CSS/change.css">
 <link rel="stylesheet" href="../src/bootstrap/bootstrap.min.css">
 <link rel="stylesheet" href="../src/bootstrap/bootstrap.rtl.css">
@@ -37,28 +38,49 @@
         <div class="controller-bi">
             <div class="img-baner-safarsh d-flex flex-column justify-content-center align-items-center">
                 <h3 class="text-light shadow text-center">نظرات شما</h3>
+                <p class="text-danger text-center">اینجا می توانید نظر خود را در مورد غذا برای ما ارسال کنید</p>
                 <i class="fas fa-arrow-down bg-warning p-2 mt-5 arrow-down-comment "></i>
             </div>
         </div>
     </section>
 
-    <section class="set-oop-3">
-        <div class="controller-comment container mt-4">
-            <div class="row row-cols-1 row-cols-xl-4 row-cols-lg-4 row-cols-md-3 row-cols-sm-2">
-                <div class="col mt-2">
-                    <div class="comment card" style="width: 18rem;" dir="rtl">
-                        <img src="../src/images/ava-4.jpg" class="">
-                        <div class="card-body">
-                        <h4 class="title-comment card-title">سارا رحیمی</h4>
-                        <p class="text-comment card-text">خرید غذا از فروشگاه پیتزا پیتزا بهترین تجربه برام بود</p>
-                        <p class="functions-comment card-text">غذای عالی</p>
-                        <button class="btn btn-success btn-outline-success text-light">پاسخ</button>
-                        </div>
-                    </div>
-                </div>
+    <section class="set-oop-main">
+        <div class="form" dir="rtl">
+            <div class="form-control form-control-comment p-5 row row-cols-1 row-cols-xl-4 row-cols-lg-4 row-cols-md-2 row-cols-sm-2 m-4">
+                <input type="text" class="title-name-text p-2 col mt-1" placeholder="نام نظر دهنده">
+                <input type="text" class="comment-text p-2 mt-1" placeholder="نظر من...">
+                <select name="food" id="selected-food" class="selected-food mt-1 col">
+                    <option value="انتخاب شما">انتخاب شما</option>
+                    <option value="غذای بد">غذای بد</option>
+                    <option value="غذای خوب">غذای خوب</option>
+                    <option value="غذای خیلی خوب">غذای خیلی خوب</option>
+                    <option value="غذای عالی">غذای عالی</option>
+                </select>
+                <button class="btn-send-comment col mt-4">ثبت نظر من</button>
             </div>
         </div>
     </section>
+
+    <section class="set-oop-3">
+        <div class="container mt-4">
+            <div class="controller-comment row row-cols-1 row-cols-xl-4 row-cols-lg-4 row-cols-md-3 row-cols-sm-2">
+                <!-- ... -->
+            </div>
+        </div>
+    </section>
+
+    <div class="modal-warning">
+        <div class="modaller">
+            <div class="close-war d-flex flex-row justify-content-end p-2">
+                <i class="fas fa-times"></i>
+            </div>
+            <h4 class="text-center h6 pt-1">خطای کاربری</h4>
+            <p class="text-center h6 text-danger">
+            لطفا برای اضافه شدن نظر خود ؛ باکس های خود را کامل کنید
+            </p>
+        </div>
+    </div>
+
     <script src="../Components/panel.js"></script>
 </body>
 </html>
