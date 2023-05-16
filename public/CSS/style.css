@@ -545,3 +545,110 @@ body::-webkit-scrollbar-thumb:hover{
         opacity: 0%;
     }
 }
+
+/* poster-prdoucts */
+
+.poster-prdoucts-1{
+    position: absolute;
+    top: 7%;
+    left: 0px;
+    width: 0px;
+    height: 93%;
+    border-radius: 0px 0px 8px 0px;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+    transition-delay: 0.2s;
+    z-index: 2;
+}
+
+.poster-prdoucts-2{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 93%;
+    background-color: #fff;
+    border-radius: 0px 0px 8px 0px;
+    box-shadow: 0 0 10px #655;
+    overflow: hidden;
+    transition: all 0.1s ease-in-out;
+    z-index: 2;
+}
+
+.close-times{
+    display: inline-block;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.close-times > i:hover{
+    color: #ec382b;
+}
+
+.poster-prdoucts-1.active{
+    width: 700px;
+    transition: all 0.3s ease-in-out;
+}
+
+.poster-prdoucts-2.active{
+    width: 690px;
+    transition: all 0.5s ease-in-out;
+}
+
+/* pdoucter */
+.img-card-prdouct{
+    width: 150px;
+    height: 180px;
+    cursor: pointer;
+}
+
+.logo-passter{
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 100%;
+}
+
+.price-none{
+    text-decoration: line-through;
+    font-weight: bold;
+}
+
+@media (max-width:800px) {
+
+    .poster-prdoucts-1.active {
+        width: 400px;
+        transition: all 0.3s ease-in-out;
+        transition-delay: 0.2s;
+    }
+
+    .poster-prdoucts-2.active {
+        width: 400px;
+        transition: all 0.5s ease-in-out;
+        transition-delay: 0.6s;
+    }
+}
+
+.count-prdouct{
+    width: 40px;
+    height: 40px;
+    background-color: #ffe600;
+    color: #000;
+    text-align: center;
+    border-radius: 100%;
+    padding-top: 8px;
+    margin: 20px 10px 14px;
+    border: 1px solid #000;
+}
+
+.img-prdouct{
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+.item-prdouct{
+    border-bottom: 1px dashed #666;
+    padding: 8px;
+    overflow: auto;
+}
