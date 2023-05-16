@@ -36,9 +36,9 @@
                 <h4 class="close-times p-3">
                     <i class="fas fa-times"></i>
                 </h4>
-                <h4 class="text-center fs-5 pt-1 pb-2">سبد خرید شما خالی است</h4>
+                <h4 class="condition text-center fs-5 pt-1 pb-2">سبد خرید شما خالی است</h4>
                 <div class="box-prdouct d-flex flex-column justify-content-start">
-                    <div class="item-prdouct d-flex flex-row bg-white">
+                    <!-- <div class="item-prdouct d-flex flex-row bg-white">
                         <h4 class="count-prdouct">1</h4>
                         <img src="../src/images/banner.jpg" class="img-prdouct">
                         <h4 class="name-prdouct fs-5 pt-4 ps-2">پیتزا گوشت</h4>
@@ -47,8 +47,15 @@
                         <h4 class="number-prdouct fs-5 pt-4 ps-2">10</h4>
                         <a href="#" class="h-25 btn btn-outline-danger mt-3 ms-2">-</a>
                         <a href="#" class="h-25 btn btn-outline-success mt-3 ms-5">خرید</a>
-                    </div>
+                    </div> -->
                 </div>
+            </div>
+        </div>
+        <div class="total-prices bg-warning text-dark d-flex flex-column justify-content-center">
+            <h4 class="text-prices text-center fs-5 p-3">جمع همه ی غذا های شما</h4>
+            <div class="content-price pt-3 d-flex flex-row-reverse justify-content-center p-2">
+            <h4 class="price-comment ps-4 text-dark fs-5">جمع سبد خرید شما </h4>
+            <h4 class="total-prices-main text-danger fw-bold">0</h4>
             </div>
         </div>
     </div>
@@ -60,10 +67,11 @@
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 g-1">
                 <div class="col">
                     <div class="card card-body">
+                    <input type="hidden" value="1" id="id-value">
                     <img src="../src/images/buy-1.jpeg" class="img-card-prdouct rounded-1 card-img rounded-top-5">
-                    <h4 class="name-card-prdouct lead pt-2 card-header">کیک ایتالیایی</h4>
+                    <h4 class="name-card-prdouct lead pt-2 card-header">سمبوسه ایتالیایی</h4>
                     <div class="price-cards d-flex flex-row justify-content-start m-3">
-                    <h4 class="price-main fs-6 text-danger ps-1">1200000</h4>
+                    <h4 class="price-main fs-6 text-danger ps-1">1400000</h4>
                     <h4 class="price-text fs-6 text-primary">تومان</h4>
                     <h4 class="price-none fs-6 text-danger ps-4">1900000</h4>
                     </div>
@@ -79,12 +87,13 @@
                 </div>
                 <div class="col">
                     <div class="card card-body">
+                    <input type="hidden" value="2" id="id-value">
                     <img src="../src/images/buy-2.jpeg" class="img-card-prdouct rounded-1 card-img rounded-top-5">
-                    <h4 class="name-card-prdouct lead pt-2 card-header">کیک ایتالیایی</h4>
+                    <h4 class="name-card-prdouct lead pt-2 card-header">همبرگر مخصوص</h4>
                     <div class="price-cards d-flex flex-row justify-content-start m-3">
-                    <h4 class="price-main fs-6 text-danger ps-1">1200000</h4>
+                    <h4 class="price-main fs-6 text-danger ps-1">800000</h4>
                     <h4 class="price-text fs-6 text-primary">تومان</h4>
-                    <h4 class="price-none fs-6 text-danger ps-4">2500000</h4>
+                    <h4 class="price-none fs-6 text-danger ps-4">1800000</h4>
                     </div>
                     <div class="star d-flex justify-content-start pb-2">
                     <img src="../src/logo/star.svg">
@@ -98,10 +107,31 @@
                 </div>
                 <div class="col">
                     <div class="card card-body">
+                    <input type="hidden" value="3" id="id-value">
                     <img src="../src/images/buy-3.jpeg" class="img-card-prdouct rounded-1 card-img rounded-top-5">
-                    <h4 class="name-card-prdouct lead pt-2 card-header">کیک ایتالیایی</h4>
+                    <h4 class="name-card-prdouct lead pt-2 card-header">پیتزا گوشت</h4>
                     <div class="price-cards d-flex flex-row justify-content-start m-3">
-                    <h4 class="price-main fs-6 text-danger ps-1">1200000</h4>
+                    <h4 class="price-main fs-6 text-danger ps-1">900000</h4>
+                    <h4 class="price-text fs-6 text-primary">تومان</h4>
+                    <h4 class="price-none fs-6 text-danger ps-4">2200000</h4>
+                    </div>
+                    <div class="star d-flex justify-content-start pb-2">
+                    <img src="../src/logo/star.svg">
+                    <img src="../src/logo/star.svg">
+                    <img src="../src/logo/star.svg">
+                    <img src="../src/logo/star.svg">
+                    <img src="../src/logo/star.svg">
+                    </div>
+                    <a class="btn-add-to-cart btn btn-outline-success border-2">افزودن به سبد خرید</a>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card card-body">
+                    <input type="hidden" value="4" id="id-value">
+                    <img src="../src/images/buy-4.jpeg" class="img-card-prdouct rounded-1 card-img rounded-top-5">
+                    <h4 class="name-card-prdouct lead pt-2 card-header">همبرگر خرچنگی</h4>
+                    <div class="price-cards d-flex flex-row justify-content-start m-3">
+                    <h4 class="price-main fs-6 text-danger ps-1">700000</h4>
                     <h4 class="price-text fs-6 text-primary">تومان</h4>
                     <h4 class="price-none fs-6 text-danger ps-4">1500000</h4>
                     </div>
@@ -117,27 +147,9 @@
                 </div>
                 <div class="col">
                     <div class="card card-body">
-                    <img src="../src/images/buy-4.jpeg" class="img-card-prdouct rounded-1 card-img rounded-top-5">
-                    <h4 class="name-card-prdouct lead pt-2 card-header">کیک ایتالیایی</h4>
-                    <div class="price-cards d-flex flex-row justify-content-start m-3">
-                    <h4 class="price-main fs-6 text-danger ps-1">1200000</h4>
-                    <h4 class="price-text fs-6 text-primary">تومان</h4>
-                    <h4 class="price-none fs-6 text-danger ps-4">2900000</h4>
-                    </div>
-                    <div class="star d-flex justify-content-start pb-2">
-                    <img src="../src/logo/star.svg">
-                    <img src="../src/logo/star.svg">
-                    <img src="../src/logo/star.svg">
-                    <img src="../src/logo/star.svg">
-                    <img src="../src/logo/star.svg">
-                    </div>
-                    <a class="btn-add-to-cart btn btn-outline-success border-2">افزودن به سبد خرید</a>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card card-body">
+                    <input type="hidden" value="5" id="id-value">
                     <img src="../src/images/buy-5.jpeg" class="img-card-prdouct rounded-1 card-img rounded-top-5">
-                    <h4 class="name-card-prdouct lead pt-2 card-header">کیک ایتالیایی</h4>
+                    <h4 class="name-card-prdouct lead pt-2 card-header">مرغ لادن</h4>
                     <div class="price-cards d-flex flex-row justify-content-start m-3">
                     <h4 class="price-main fs-6 text-danger ps-1">1200000</h4>
                     <h4 class="price-text fs-6 text-primary">تومان</h4>
@@ -155,10 +167,11 @@
                 </div>
                 <div class="col">
                     <div class="card card-body">
+                    <input type="hidden" value="6" id="id-value">
                     <img src="../src/images/press-2.png" class="img-card-prdouct rounded-1 card-img rounded-top-5">
-                    <h4 class="name-card-prdouct lead pt-2 card-header">کیک ایتالیایی</h4>
+                    <h4 class="name-card-prdouct lead pt-2 card-header">پیتزا خانواده</h4>
                     <div class="price-cards d-flex flex-row justify-content-start m-3">
-                    <h4 class="price-main fs-6 text-danger ps-1">1200000</h4>
+                    <h4 class="price-main fs-6 text-danger ps-1">2500000</h4>
                     <h4 class="price-text fs-6 text-primary">تومان</h4>
                     <h4 class="price-none fs-6 text-danger ps-4">5100000</h4>
                     </div>
@@ -174,12 +187,13 @@
                 </div>
                 <div class="col">
                     <div class="card card-body">
+                    <input type="hidden" value="7" id="id-value">
                     <img src="../src/images/banner.jpg" class="img-card-prdouct rounded-1 card-img rounded-top-5">
-                    <h4 class="name-card-prdouct lead pt-2 card-header">کیک ایتالیایی</h4>
+                    <h4 class="name-card-prdouct lead pt-2 card-header">کباب جوجه</h4>
                     <div class="price-cards d-flex flex-row justify-content-start m-3">
                     <h4 class="price-main fs-6 text-danger ps-1">1200000</h4>
                     <h4 class="price-text fs-6 text-primary">تومان</h4>
-                    <h4 class="price-none fs-6 text-danger ps-4">500000</h4>
+                    <h4 class="price-none fs-6 text-danger ps-4">2500000</h4>
                     </div>
                     <div class="star d-flex justify-content-start pb-2">
                     <img src="../src/logo/star.svg">
@@ -194,11 +208,12 @@
                 <div class="col">
                     <div class="card card-body">
                     <img src="../src/images/press-4.png" class="img-card-prdouct rounded-1 card-img rounded-top-5">
-                    <h4 class="name-card-prdouct lead pt-2 card-header">کیک ایتالیایی</h4>
+                    <input type="hidden" value="8" id="id-value">
+                    <h4 class="name-card-prdouct lead pt-2 card-header">مینی پیتزا</h4>
                     <div class="price-cards d-flex flex-row justify-content-start m-3">
-                    <h4 class="price-main fs-6 text-danger ps-1">1200000</h4>
+                    <h4 class="price-main fs-6 text-danger ps-1">1900000</h4>
                     <h4 class="price-text fs-6 text-primary">تومان</h4>
-                    <h4 class="price-none fs-6 text-danger ps-4">900000</h4>
+                    <h4 class="price-none fs-6 text-danger ps-4">3900000</h4>
                     </div>
                     <div class="star d-flex justify-content-start pb-2">
                     <img src="../src/logo/star.svg">
