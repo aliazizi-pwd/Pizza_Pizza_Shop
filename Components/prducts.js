@@ -25,6 +25,8 @@ const countLogoCart = document.querySelector(".count-number-cart");
 const totalPrices = document.querySelector(".total-prices-main");
 let callArrayList = [];
 
+
+
 btnAddToCart.forEach((btnAdd) => {
   let isFatherElements = btnAdd.parentElement;
   btnAdd.addEventListener("click", addToCartHandler);
@@ -192,6 +194,7 @@ function deleteCart(isItem , callObjectList) {
         callArrayList.pop();
         countLogoCart.innerText = `${callArrayList.length}`;
         calculator();
+        isDeleteDataToLocalStorage(isItem);
       }
     });
   });

@@ -663,3 +663,8 @@ body::-webkit-scrollbar-thumb:hover{
 .poster-prdoucts-2::-webkit-scrollbar-thumb{
     background-color: #000;
 }
+
+.icon-chat{
+    width: 30px;
+    height: 30px;
+}
